@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "2iZXEH8QzxuccSGCW3S+PBDG51n0xTR2AtRupBRvXy0=",
+  "Source": "TrainTickedMachine.Api",
+  "BasePath": "_content/TrainTickedMachine.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -3,9 +3,41 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F07B0658-7A98-4F1C-8105-899F6659F08D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9C16F0BF-2BD5-492E-A296-C23DCB8D34C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{3D347C44-650E-491B-8921-B3690C6AF3AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B69D24E1-16E3-49EA-A756-E295447F5EE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainTickedMachine.Api", "TrainTickedMachine.Api\TrainTickedMachine.Api.csproj", "{800A00E6-5437-4DE5-A445-D9C121676B3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainTicketMachine.Domain", "TrainTicketMachine.Domain\TrainTicketMachine.Domain.csproj", "{08376247-5D99-42A0-BB7C-DA484A30F67F}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{800A00E6-5437-4DE5-A445-D9C121676B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{800A00E6-5437-4DE5-A445-D9C121676B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{800A00E6-5437-4DE5-A445-D9C121676B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{800A00E6-5437-4DE5-A445-D9C121676B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08376247-5D99-42A0-BB7C-DA484A30F67F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08376247-5D99-42A0-BB7C-DA484A30F67F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08376247-5D99-42A0-BB7C-DA484A30F67F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08376247-5D99-42A0-BB7C-DA484A30F67F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D347C44-650E-491B-8921-B3690C6AF3AB} = {F07B0658-7A98-4F1C-8105-899F6659F08D}
+		{B69D24E1-16E3-49EA-A756-E295447F5EE0} = {F07B0658-7A98-4F1C-8105-899F6659F08D}
+		{800A00E6-5437-4DE5-A445-D9C121676B3D} = {3D347C44-650E-491B-8921-B3690C6AF3AB}
+		{08376247-5D99-42A0-BB7C-DA484A30F67F} = {B69D24E1-16E3-49EA-A756-E295447F5EE0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {689CD56B-A32F-4FBD-AE73-F9BF273EA523}

@@ -1,0 +1,12 @@
+C:\LEARN_PROJECTS\ABAX_test\ABAX_test\TrainTicketMachine\TrainTicketMachine.Domain\bin\Debug\net7.0\TrainTicketMachine.Domain.deps.json
+C:\LEARN_PROJECTS\ABAX_test\ABAX_test\TrainTicketMachine\TrainTicketMachine.Domain\bin\Debug\net7.0\TrainTicketMachine.Domain.dll
+C:\LEARN_PROJECTS\ABAX_test\ABAX_test\TrainTicketMachine\TrainTicketMachine.Domain\bin\Debug\net7.0\TrainTicketMachine.Domain.pdb
+C:\LEARN_PROJECTS\ABAX_test\ABAX_test\TrainTicketMachine\TrainTicketMachine.Domain\obj\Debug\net7.0\TrainTicketMachine.Domain.csproj.AssemblyReference.cache
+C:\LEARN_PROJECTS\ABAX_test\ABAX_test\TrainTicketMachine\TrainTicketMachine.Domain\obj\Debug\net7.0\TrainTicketMachine.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\LEARN_PROJECTS\ABAX_test\ABAX_test\TrainTicketMachine\TrainTicketMachine.Domain\obj\Debug\net7.0\TrainTicketMachine.Domain.AssemblyInfoInputs.cache
+C:\LEARN_PROJECTS\ABAX_test\ABAX_test\TrainTicketMachine\TrainTicketMachine.Domain\obj\Debug\net7.0\TrainTicketMachine.Domain.AssemblyInfo.cs
+C:\LEARN_PROJECTS\ABAX_test\ABAX_test\TrainTicketMachine\TrainTicketMachine.Domain\obj\Debug\net7.0\TrainTicketMachine.Domain.csproj.CoreCompileInputs.cache
+C:\LEARN_PROJECTS\ABAX_test\ABAX_test\TrainTicketMachine\TrainTicketMachine.Domain\obj\Debug\net7.0\TrainTicketMachine.Domain.dll
+C:\LEARN_PROJECTS\ABAX_test\ABAX_test\TrainTicketMachine\TrainTicketMachine.Domain\obj\Debug\net7.0\refint\TrainTicketMachine.Domain.dll
+C:\LEARN_PROJECTS\ABAX_test\ABAX_test\TrainTicketMachine\TrainTicketMachine.Domain\obj\Debug\net7.0\TrainTicketMachine.Domain.pdb
+C:\LEARN_PROJECTS\ABAX_test\ABAX_test\TrainTicketMachine\TrainTicketMachine.Domain\obj\Debug\net7.0\ref\TrainTicketMachine.Domain.dll
