@@ -7,9 +7,8 @@ Project include one background workers, for handling unrealible connections to t
 Project supports Swagger 
 Api endpoint include caching data.
 
-Responce model:
-IEnumerable<string>? Stations 
-IEnumerable<char>? NextLetters 
+Responce model example:
+
 ![image](https://github.com/PetroYatsiv/ABAX_test/assets/14931992/473ca139-de4b-4b99-99fa-acdbf7eb1317)
 
 
