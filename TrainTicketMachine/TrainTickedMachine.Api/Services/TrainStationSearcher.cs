@@ -29,6 +29,8 @@ namespace TrainTickedMachine.Api.Services
                 NextLetters = nextLetters
             };
 
+            _logger.LogInformation($"SearchStation: {name} - {resultStations.Count} results");
+
             return result;
         }
     }

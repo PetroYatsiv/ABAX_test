@@ -1,3 +1,4 @@
+using Microsoft.Extensions.DependencyInjection;
 using TrainTickedMachine.Api;
 
 var builder = WebApplication.CreateBuilder(args);

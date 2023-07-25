@@ -6,15 +6,14 @@ namespace TrainTickedMachine.Api.Services;
 
 public class TrainStationFetcher : ITrainStationFetcher
 {
-    private readonly ILogger<TrainStationFetcher> _logger;
+    private const string TrainStationsCacheKey = "TrainStations";
     private readonly IHttpClientFactory _httpClientFactory;
+    private readonly IMemoryCache _memoryCache;
 
-    public TrainStationFetcher(
-        ILogger<TrainStationFetcher> logger, 
-        IHttpClientFactory httpClientFactory)
+    public TrainStationFetcher(IHttpClientFactory httpClientFactory, IMemoryCache memoryCache)
     {
-        _logger = logger;
         _httpClientFactory = httpClientFactory;
+        _memoryCache = memoryCache;
     }
 
     public async Task<ILookup<string, TrainStation>> GetStationsFromApiAsync()
@@ -30,8 +29,18 @@ public class TrainStationFetcher : ITrainStationFetcher
         var jsonString = await response.Content.ReadAsStringAsync();
         var trainStations = JsonConvert.DeserializeObject<List<TrainStation>>(jsonString);
 
-        var stationDictionary = trainStations.ToLookup(station => station.StationName);
+        var stationsLokup = trainStations.ToLookup(station => station.StationName);
         
-        return stationDictionary;
+        return stationsLokup;
+    }
+
+    public async Task<ILookup<string, TrainStation>> GetStationsFromCacheAsync()
+    {
+        if (_memoryCache.TryGetValue(TrainStationsCacheKey, out ILookup<string, TrainStation> trainStations))
+        {
+            return trainStations;
+        }
+
+        return null;
     }
 }
