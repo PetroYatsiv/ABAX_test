@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainTickedMachine.Api", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainTicketMachine.Domain", "TrainTicketMachine.Domain\TrainTicketMachine.Domain.csproj", "{08376247-5D99-42A0-BB7C-DA484A30F67F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainTickedMachine.Api.Tests", "TrainTickedMachine.Api.Tests\TrainTickedMachine.Api.Tests.csproj", "{4BEF48C1-DC30-4395-8D04-2469D6A4AD74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{08376247-5D99-42A0-BB7C-DA484A30F67F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08376247-5D99-42A0-BB7C-DA484A30F67F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08376247-5D99-42A0-BB7C-DA484A30F67F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BEF48C1-DC30-4395-8D04-2469D6A4AD74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BEF48C1-DC30-4395-8D04-2469D6A4AD74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BEF48C1-DC30-4395-8D04-2469D6A4AD74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BEF48C1-DC30-4395-8D04-2469D6A4AD74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +44,7 @@ Global
 		{B69D24E1-16E3-49EA-A756-E295447F5EE0} = {F07B0658-7A98-4F1C-8105-899F6659F08D}
 		{800A00E6-5437-4DE5-A445-D9C121676B3D} = {3D347C44-650E-491B-8921-B3690C6AF3AB}
 		{08376247-5D99-42A0-BB7C-DA484A30F67F} = {B69D24E1-16E3-49EA-A756-E295447F5EE0}
+		{4BEF48C1-DC30-4395-8D04-2469D6A4AD74} = {9C16F0BF-2BD5-492E-A296-C23DCB8D34C9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {689CD56B-A32F-4FBD-AE73-F9BF273EA523}
