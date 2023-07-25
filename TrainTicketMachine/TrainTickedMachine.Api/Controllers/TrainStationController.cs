@@ -10,10 +10,15 @@ public class TrainStationController : ControllerBase
 {
     private readonly ILogger<TrainStationController> _logger;
     private readonly ITrainStationFetcher _trainStationFetcher;
-    public TrainStationController(ILogger<TrainStationController> logger, ITrainStationFetcher stationFetcher)
+    private readonly ITrainStationSearcher _trainStationSearcher;
+    public TrainStationController(
+        ILogger<TrainStationController> logger, 
+        ITrainStationFetcher stationFetcher,
+        ITrainStationSearcher trainStationSearcher)
     {
         _logger = logger;
         _trainStationFetcher = stationFetcher;
+        _trainStationSearcher = trainStationSearcher;
     }
 
     /// <summary>
@@ -25,7 +30,13 @@ public class TrainStationController : ControllerBase
     public async Task<IActionResult> SearchStation(string name)
     {
         var stations = await _trainStationFetcher.GetStationsFromApiAsync();
-        return Ok(stations);
+        if (stations != null)
+        {
+            var response = _trainStationSearcher.SearchStation(name, stations);
+            return Ok(response);
+        }
+
+        return NotFound();
     }
 
 }

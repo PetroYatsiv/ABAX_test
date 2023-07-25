@@ -1,29 +1,35 @@
 ﻿using Microsoft.Extensions.Caching.Distributed;
+using TrainTickedMachine.Api.Models.Dtos;
+using TrainTicketMachine.Domain.Entities;
 
 namespace TrainTickedMachine.Api.Services
 {
     public class TrainStationSearcher : ITrainStationSearcher
     {
         private readonly ILogger<TrainStationSearcher> _logger;
-        private readonly IDistributedCache _cache;
 
-        public TrainStationSearcher(ILogger<TrainStationSearcher> logger, IDistributedCache cache)
+        public TrainStationSearcher(ILogger<TrainStationSearcher> logger)
         {
             _logger = logger;
-            _cache = cache;
         }
 
-        //public async Task<TrainStation> GetStationFromCacheAsync(string stationCode)
-        //{
-        //    var trainStation = await _cache.GetStringAsync(stationCode);
+        public ResponseSearchStationsDto SearchStation(string name, ILookup<string, TrainStation> stations)
+        {
+            var resultStations = stations
+                .Where(group => group.Key.StartsWith(name, StringComparison.OrdinalIgnoreCase))
+            .SelectMany(group => group).Select(x => x.StationName).ToList();
 
-        //    if (trainStation is null)
-        //    {
-        //        _logger.LogInformation($"Station with code {stationCode} not found in cache");
-        //        return null;
-        //    }
+            var nextLetters = resultStations
+                .Select(station => station[name.Length..].FirstOrDefault())
+                .Distinct()
+                .ToList();
+            var result = new ResponseSearchStationsDto
+            {
+                Stations = resultStations,
+                NextLetters = nextLetters
+            };
 
-        //    return JsonSerializer.Deserialize<TrainStation>(trainStation);
-        //}
+            return result;
+        }
     }
 }

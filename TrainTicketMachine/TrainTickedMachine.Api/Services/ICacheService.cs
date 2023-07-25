@@ -4,6 +4,6 @@ namespace TrainTickedMachine.Api.Services;
 
 public interface ICacheService
 {
-    Task<Dictionary<string, TrainStation>>? SetCache();
-    void SetCache(Dictionary<string, TrainStation> trainStations);
+    Task<ILookup<string, TrainStation>>? SetCache();
+    void SetCache(ILookup<string, TrainStation> trainStations);
 }

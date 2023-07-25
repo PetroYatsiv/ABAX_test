@@ -20,6 +20,11 @@ public class TrainStationsCacheService : BackgroundService
         while (!stoppingToken.IsCancellationRequested)
         {
             _cacheService.SetCache();
+
+            //wait 30 minutes before updating the cache again
+            //this is to avoid hitting the central system too often
+            //and to avoid hitting the cache too often
+            await Task.Delay(TimeSpan.FromMinutes(30), stoppingToken);
         }
     }
 }

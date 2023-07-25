@@ -19,23 +19,24 @@ public class CacheService : ICacheService
         _memoryCache = memoryCache;
         _trainStationFetcher = trainStationFetcher;
     }
-    public async Task<Dictionary<string, TrainStation>>? SetCache()
+    public async Task<ILookup<string, TrainStation>>? SetCache()
     {
         var cacheOptions = new MemoryCacheEntryOptions()
                 .SetSlidingExpiration(TimeSpan.FromHours(12))
                 .SetAbsoluteExpiration(TimeSpan.FromDays(1));
 
-        if (_memoryCache.TryGetValue(TrainStationsCacheKey, out Dictionary<string, TrainStation> trainStations))
+        if (_memoryCache.TryGetValue(TrainStationsCacheKey, out ILookup<string, TrainStation> trainStations))
             return trainStations;
 
-        var freshStations = await _trainStationFetcher.GetStationsFromApiAsync();
+        var freshCachedStations = await _trainStationFetcher.GetStationsFromApiAsync();
 
         _logger.LogInformation("Updating cache with fresh data");
-        _memoryCache.Set(TrainStationsCacheKey, trainStations, cacheOptions);
-        return trainStations;
+        _memoryCache.Set(TrainStationsCacheKey, freshCachedStations, cacheOptions);
+
+        return freshCachedStations;
     }
 
-    public void SetCache(Dictionary<string, TrainStation> trainStations)
+    public void SetCache(ILookup<string, TrainStation> trainStations)
     {
         var cacheOptions = new MemoryCacheEntryOptions()
                 .SetSlidingExpiration(TimeSpan.FromHours(12))
